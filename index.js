@@ -34,7 +34,6 @@ app.use(
     secret: SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
-    authRequired: false,
   })
 );
 
@@ -42,6 +41,7 @@ app.use(
  auth({
    secret: SESSION_SECRET,
    auth0Logout: true,
+   authRequired: false,
    baseURL: APP_URL,
  })
 );
