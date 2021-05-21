@@ -49,7 +49,7 @@ app.use(
 
 app.get("/", async (req, res) => {
   try {
-       const summary = await axios.get(\`${API_URL}/total\`);
+       const summary = await axios.get(`${API_URL}/total`);
        res.render("home", {
          user: req.oidc && req.oidc.user,
          total: summary.data.total,
